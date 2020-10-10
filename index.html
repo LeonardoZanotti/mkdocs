@@ -75,6 +75,8 @@
         
             <li><a class="toctree-l3" href="#building">Building</a></li>
         
+            <li><a class="toctree-l3" href="#deploy-to-github">Deploy to GitHub</a></li>
+        
         </ul>
     
 
@@ -144,20 +146,31 @@ docs/
 $ mkdocs --version      # show mkdocs version and successful installation
 </code></pre>
 
+<p>Or use pip:</p>
+<pre><code class="bash">$ pip install mkdocs
+$ mkdocs --version      # show mkdocs version and successful installation
+</code></pre>
+
 <h2 id="creating-a-project">Creating a project</h2>
 <p>To create a new mkdocs project, just use:</p>
 <pre><code class="bash">$ mkdocs new project-name
+$ cd project-name
 </code></pre>
 
 <p>It will create a "project-name" folder, and inside this folder will have a docs folder and a mkdocs.yml configuration file.</p>
+<pre><code class="bash">|--docs
+|----index.md
+|--mkdocs.yml
+</code></pre>
+
 <p>Inside docs, put your markdown files, which will be the site pages.</p>
 <p>In mkdocs.yml its possible to configure all the site, the basic configuration looks like:</p>
 <pre><code class="bash">site_name: &lt;your-site-name&gt;
-nav:        # navigation menu
-  - Home: index.md      # home markdown file
-  - Page2: page2.md     # other page markdown file
-                        # create a page for each .md file
-theme: readthedocs      # you can configure a theme for your website here
+nav:                            # navigation menu
+  - Home: index.md              # home markdown file
+  - Page2: page2.md             # other page markdown file
+                                # create a page for each .md file
+theme: readthedocs              # you can configure a theme for your website here
 </code></pre>
 
 <h2 id="running">Running</h2>
@@ -173,7 +186,24 @@ css  deploy  fonts  img  index.html
 js  mkdocs  search.html  sitemap.xml
 </code></pre>
 
-<p>Now, just deploy your project and your website will run :D.</p>
+<h2 id="deploy-to-github">Deploy to GitHub</h2>
+<p>Now, your project folder looks like:</p>
+<pre><code class="bash">|--docs
+|----index.md
+|----page2.md
+|--site
+|--mkdocs.yml
+</code></pre>
+
+<p>First, lets ignore the site folder for it doesnt go to our repository:</p>
+<pre><code class="bash">$ echo &quot;site/&quot; &gt; .gitignore
+</code></pre>
+
+<p>Then, just do the deploy to Github Pages with the MkDocs command:</p>
+<pre><code class="bash">$ mkdocs gh-deploy
+</code></pre>
+
+<p>It will create a gh-pages branch and push all to the repository (will need your Github email and password), so finish the site before the deploy. After the command, your website will be online on <code>https://&lt;your-github-name&gt;.github.io/&lt;your-repo-name&gt;/</code></p>
 <h1 id="leonardozanotti">LeonardoZanotti</h1>
               
             </div>
@@ -221,5 +251,5 @@ js  mkdocs  search.html  sitemap.xml
 
 <!--
 MkDocs version : 0.16.3
-Build Date UTC : 2020-10-10 20:08:34
+Build Date UTC : 2020-10-10 20:34:09
 -->
