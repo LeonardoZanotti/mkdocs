@@ -8,14 +8,25 @@ $ sudo apt install mkdocs
 $ mkdocs --version		# show mkdocs version and successful installation
 ```
 
+Or use pip:
+```bash
+$ pip install mkdocs
+$ mkdocs --version
+```
+
 ## Creating a project
 To create a new mkdocs project, just use:
 ```bash
 $ mkdocs new project-name
+$ cd project-name
 ```
 
 It will create a "project-name" folder, and inside this folder will have a docs folder and a mkdocs.yml configuration file.
-
+```bash
+|--docs
+|----index.md
+|--mkdocs.yml
+```
 Inside docs, put your markdown files, which will be the site pages.
 
 In mkdocs.yml its possible to configure all the site, the basic configuration looks like:
