@@ -21,11 +21,11 @@ Inside docs, put your markdown files, which will be the site pages.
 In mkdocs.yml its possible to configure all the site, the basic configuration looks like:
 ```bash
 site_name: <your-site-name>
-nav:		# navigation menu
-  - Home: index.md 		# home markdown file
-  - Page2: page2.md 	# other page markdown file
-  						# create a page for each .md file
-theme: readthedocs		# you can configure a theme for your website here
+nav:                            # navigation menu
+  - Home: index.md              # home markdown file
+  - Page2: page2.md             # other page markdown file
+                                # create a page for each .md file
+theme: readthedocs              # you can configure a theme for your website here
 ```
 
 ## Running
