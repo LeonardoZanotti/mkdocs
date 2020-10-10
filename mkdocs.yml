@@ -1,0 +1,5 @@
+site_name: Zanotti mkdocs
+nav:
+  - Home: index.md
+  - Deploy: deploy.md
+theme: readthedocs
