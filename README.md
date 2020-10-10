@@ -11,7 +11,7 @@ $ mkdocs --version		# show mkdocs version and successful installation
 Or use pip:
 ```bash
 $ pip install mkdocs
-$ mkdocs --version
+$ mkdocs --version		# show mkdocs version and successful installation
 ```
 
 ## Creating a project
@@ -54,6 +54,27 @@ css  deploy  fonts  img  index.html
 js  mkdocs  search.html  sitemap.xml
 ```
 
-Now, just deploy your project and your website will run :D.
+## Deploy to GitHub
+Now, your project folder looks like:
+```bash
+|--docs
+|----index.md
+|----page2.md
+|--site
+|--mkdocs.yml
+```
+
+First, lets ignore the site folder for it doesnt go to our repository:
+```bash
+$ echo "site/" > .gitignore
+```
+
+Then, just do the deploy to Github Pages with the MkDocs command:
+```bash
+$ mkdocs gh-deploy
+```
+
+It will create a gh-pages branch and push all to the repository (will need your Github email and password), so finish the site before the deploy. After the command, your website will be online on `https://<your-github-name>.github.io/<your-repo-name>/`
+
 
 # LeonardoZanotti
