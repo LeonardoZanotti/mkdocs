@@ -69,7 +69,7 @@ First, lets ignore the site folder for it doesnt go to our repository:
 $ echo "site/" > .gitignore
 ```
 
-Then, just do the deploy to Github Pages with the MkDocs command:
+Then, push all to your repo and do the deploy to Github Pages with the MkDocs command:
 ```bash
 $ mkdocs gh-deploy
 ```
